@@ -1,0 +1,24 @@
+mat-sidenav-container{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+mat-sidenav{
+    width: 200px;
+}
+mat-list-item{
+    cursor:pointer;
+}
+a.navbar-brand{
+    margin:auto;
+    position: relative;
+    align-self: center;
+    display: flex;
+    text-align: center;
+}
+div{
+    padding: 20px;
+}
+mat-sidenav-content{
+    padding: 50px;
+}
