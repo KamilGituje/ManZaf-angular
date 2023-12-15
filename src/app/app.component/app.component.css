@@ -21,4 +21,5 @@ div{
 }
 mat-sidenav-content{
     padding: 50px;
+    height: 100%;
 }

@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "manzaf-gangular:build:production"
+              "buildTarget": "manzaf-gangular:build:production"
             },
             "development": {
-              "browserTarget": "manzaf-gangular:build:development"
+              "buildTarget": "manzaf-gangular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "manzaf-gangular:build"
+            "buildTarget": "manzaf-gangular:build"
           }
         },
         "test": {
