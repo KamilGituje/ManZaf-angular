@@ -4,13 +4,13 @@ import { LeaveRequestRoutingModule } from './leave-request/leave-request-routing
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  {path: "", component: WelcomeComponent}
+  { path: "", component: WelcomeComponent },
+  { path: "leave", loadChildren: () => import("./leave-request/leave-request.module").then(m => m.LeaveRequestModule) }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-  LeaveRequestRoutingModule
-],
+  imports: [RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

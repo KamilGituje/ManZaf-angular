@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { DateAdapter, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -23,10 +25,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatListModule
+    SharedModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: "en-GB" }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
