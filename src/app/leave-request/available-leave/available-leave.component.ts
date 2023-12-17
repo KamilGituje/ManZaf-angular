@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Leave } from 'src/app/models/leave';
 import { LeaveService } from 'src/app/services/leave.service';
+import { WorkerService } from 'src/app/services/worker.service';
 
 @Component({
   selector: 'pm-available-leaves',
@@ -9,12 +10,16 @@ import { LeaveService } from 'src/app/services/leave.service';
 })
 export class AvailableLeaveComponent implements OnInit {
 
-  constructor(private leaveService: LeaveService) { }
+  constructor(private workerService: WorkerService, private leaveService: LeaveService) { }
 
   leaves: Leave[];
+  selectedLeave: Leave = null;
 
   ngOnInit(): void {
-    this.leaveService.GetAvailableLeavesForWorker(17).subscribe({next: leaves => this.leaves = leaves});
+    this.leaveService.GetAvailableLeavesForWorker(this.workerService.workerId).subscribe({next: leaves => this.leaves = leaves});
+  }
+  onClick(leave: Leave): void{
+    this.selectedLeave = leave;
   }
 
 }

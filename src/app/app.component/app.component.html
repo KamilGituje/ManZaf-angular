@@ -1,22 +1,17 @@
 <body>
-<mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened>
-    <a class="navbar-brand" routerLink="/">ManZaf</a>
-    <div>
-    <h3>Single line lists</h3>
-    <mat-list>
-      <mat-list-item routerLink="/leave">Leave requests</mat-list-item>
-    </mat-list>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
-
-
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <a class="navbar-brand" routerLink="/">ManZaf</a>
+      <div>
+        <h3>Single line lists</h3>
+        <mat-list>
+          <mat-list-item routerLink="/leave" style="cursor:pointer">Leave requests</mat-list-item>
+          <mat-list-item routerLink="/" style="cursor:pointer">dsadas</mat-list-item>
+        </mat-list>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
       <router-outlet></router-outlet>
-
-
-
-
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </body>

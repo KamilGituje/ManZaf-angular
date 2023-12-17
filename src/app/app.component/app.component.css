@@ -1,12 +1,11 @@
-mat-sidenav-container{
+mat-drawer-container{
     height: 100%;
     width: 90%;
     margin: auto;
 }
-mat-sidenav{
+mat-drawer{
     width: 200px;
 }
-/* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version. */
 mat-list-item{
     cursor:pointer;
 }
@@ -20,7 +19,7 @@ a.navbar-brand{
 div{
     padding: 20px;
 }
-mat-sidenav-content{
+mat-drawer-content{
     padding: 50px;
     height: 100%;
 }

@@ -8,6 +8,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
+import {
+  MatDialog,
+  MatDialogRef,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogTitle,
+  MatDialogContent,
+} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button'
 
 
 
@@ -22,7 +32,15 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule,
+    MatDialog,
+    MatDialogRef,
+    MatDialogActions,
+    MatDialogClose,
+    MatDialogTitle,
+    MatDialogContent,
+    MatButtonModule
   ],
   providers: [
   ],
@@ -34,7 +52,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

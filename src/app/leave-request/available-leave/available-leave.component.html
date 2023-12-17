@@ -1,16 +1,17 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Leave type</th>
-        <th scope="col">Number of available days</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let leave of leaves; let i = index">
-        <th scope="row">{{i + 1}}</th>
-        <td>{{leave.leaveType.name}}</td>
-        <td>{{leave.quantity}}</td>
-      </tr>
-    </tbody>
-  </table>
+<table class="table table-sm table-striped table-hover narrow">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Leave type</th>
+      <th scope="col">Number of available days</th>
+    </tr>
+  </thead>
+  <tbody><button mat-raised-button (click)="openDialog('0ms', '0ms')">
+    <tr  class="pointer" *ngFor="let leave of leaves; let i = index" (click)="onClick(leave)">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{leave.leaveType.name}}</td>
+      <td>{{leave.quantity}}</td>
+    </tr></button>
+  </tbody>
+</table>
+<div *ngIf="selectedLeave">{{selectedLeave.leaveType.name}}</div>dsadsa

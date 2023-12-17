@@ -1,6 +1,7 @@
 import { LeaveType } from "./leave-type";
 
-export class Leave{
+export class SingleLeave{
     leaveType: LeaveType;
-    quantity: number;
+    startDate: Date;
+    endDate: Date;
 }

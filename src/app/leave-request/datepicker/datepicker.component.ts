@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
@@ -18,8 +18,10 @@ export class DatepickerComponent {
 
   minDate = new Date();
   maxDate: Date;
+  startDate: Date;
+  endDate: Date;
 
-  myFilter(day: Date): boolean{
+  weekendDaysFilter(day: Date): boolean{
     if(day.getDay() === 0 || day.getDay() === 6)
     {
       return false;
@@ -27,4 +29,3 @@ export class DatepickerComponent {
     return true;
   }
 }
-

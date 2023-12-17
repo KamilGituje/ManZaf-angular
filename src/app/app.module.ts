@@ -7,11 +7,11 @@ import { HttpClientModule } from "@angular/common/http"
 import { AppComponent } from './app.component/app.component';
 import { LoginComponent } from './login.component/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DateAdapter, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
+import {  MAT_DATE_LOCALE } from '@angular/material/core';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({

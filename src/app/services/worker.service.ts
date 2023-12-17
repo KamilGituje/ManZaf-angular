@@ -12,6 +12,7 @@ export class WorkerService {
     constructor(private http: HttpClient) { }
 
     private baseUrl = environment.baseUrl;
+    workerId = 17;
 
     getWorker(workerId: number): Observable<Worker> {
         return this.http.get<Worker>(`${this.baseUrl}/${ApiPaths.workers}/${workerId}`);
