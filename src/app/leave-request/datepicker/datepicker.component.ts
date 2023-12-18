@@ -1,5 +1,7 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, Inject, OnChanges } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { DialogData } from '../available-leave/available-leave.component';
 
 @Component({
   selector: 'pm-datepicker',
@@ -8,7 +10,8 @@ import { DateAdapter } from '@angular/material/core';
 })
 
 export class DatepickerComponent {
-  constructor(private adapter: DateAdapter<Date>) {
+  constructor(private adapter: DateAdapter<Date>, public dialogRef: MatDialogRef<DatepickerComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
     const currentDay = new Date().getDate();
     const currentYear = new Date().getFullYear();
     this.minDate.setDate(currentDay + 1)

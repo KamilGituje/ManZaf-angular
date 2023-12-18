@@ -6,12 +6,18 @@
       <th scope="col">Number of available days</th>
     </tr>
   </thead>
-  <tbody><button mat-raised-button (click)="openDialog('0ms', '0ms')">
+  <tbody>
     <tr  class="pointer" *ngFor="let leave of leaves; let i = index" (click)="onClick(leave)">
       <th scope="row">{{i + 1}}</th>
       <td>{{leave.leaveType.name}}</td>
       <td>{{leave.quantity}}</td>
-    </tr></button>
+    </tr>
   </tbody>
+  
+<div *ngIf="selectedLeave">{{selectedLeave.leaveType.name}}</div>dsadsa{{startDate}}aaaaaaaa{{endDate}}
 </table>
-<div *ngIf="selectedLeave">{{selectedLeave.leaveType.name}}</div>dsadsa
+<ol>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+</ol>

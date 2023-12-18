@@ -1,10 +1,16 @@
 <mat-form-field>
   <mat-label>Enter a date range</mat-label>
   <mat-date-range-input [rangePicker]="picker" [min]="minDate" [max]="maxDate" [dateFilter]="weekendDaysFilter">
-    <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
-    <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+    <input matStartDate placeholder="Start date" [(ngModel)]="data.startDate">
+    <input matEndDate placeholder="End date" [(ngModel)]="data.endDate">
   </mat-date-range-input>
   <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint>
   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-date-range-picker #picker></mat-date-range-picker>
+  <mat-date-range-picker #picker>
+    <mat-date-range-picker-actions>
+      <button mat-button matDatepickerCancel>Cancel</button>
+      <button mat-raised-button color="primary" matDatepickerApply [mat-dialog-close]="data">Apply</button>
+    </mat-date-range-picker-actions>
+  </mat-date-range-picker>
+
 </mat-form-field>
