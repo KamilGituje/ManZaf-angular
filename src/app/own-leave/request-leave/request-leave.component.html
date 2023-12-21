@@ -7,17 +7,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr  class="pointer" *ngFor="let leave of leaves; let i = index" (click)="onClick(leave)">
+    <tr  class="pointer" *ngFor="let leave of leaves; let i = index" (click)="openDialog(leave)">
       <th scope="row">{{i + 1}}</th>
       <td>{{leave.leaveType.name}}</td>
       <td>{{leave.quantity}}</td>
     </tr>
   </tbody>
-  
-<div *ngIf="selectedLeave">{{selectedLeave.leaveType.name}}</div>dsadsa{{startDate}}aaaaaaaa{{endDate}}
 </table>
-<ol>
-  <li>
-    <button mat-raised-button (click)="openDialog()">Pick one</button>
-  </li>
-</ol>
+<div *ngIf="singleLeave.startDate">
+<div><a>{{selectedLeave.leaveType.name}} leave from {{singleLeave.startDate}} to {{singleLeave.endDate}}</a>
+</div>
+<div><button mat-raised-button color="primary" (click)="onConfirm(singleLeave)">Confirm</button></div>
+</div>

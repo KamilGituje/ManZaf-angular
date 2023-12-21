@@ -8,9 +8,9 @@ import { AppComponent } from './app.component/app.component';
 import { LoginComponent } from './login.component/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {  MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SharedModule } from './shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     SharedModule
   ],
   providers: [
-    { provide: MAT_DATE_LOCALE, useValue: "en-GB" }
+    { provide: MAT_DATE_LOCALE, useValue: "en-GB" },
+    { provide: DatePipe }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,18 @@
+<table class="table table-sm table-striped table-hover narrow">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Leave type</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="pointer" *ngFor="let singleLeave of singleLeaves; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{singleLeave.leaveType.name}}</td>
+            <td>{{singleLeave.startDate}} - {{singleLeave.endDate}}</td>
+            <td [ngClass]="{'st-accepted': singleLeave.status === 1, 'st-rejected': singleLeave.status === 2}">{{status[singleLeave.status]}}</td>
+        </tr>
+    </tbody>
+</table>

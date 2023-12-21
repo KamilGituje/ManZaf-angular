@@ -14,7 +14,7 @@ export class LeaveService{
 
     private baseUrl = environment.baseUrl
 
-    GetAvailableLeavesForWorker(workerId: number) : Observable<Leave[]>{
+    getAvailableLeaves(workerId: number) : Observable<Leave[]>{
         return this.http.get<Leave[]>(`${this.baseUrl}/${ApiPaths.leaves}/${workerId}`)
     }
 }

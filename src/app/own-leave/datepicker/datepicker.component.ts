@@ -1,7 +1,7 @@
-import { Component, Inject, OnChanges } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { DialogData } from '../available-leave/available-leave.component';
+import { DialogData } from '../request-leave/request-leave.component';
 
 @Component({
   selector: 'pm-datepicker',

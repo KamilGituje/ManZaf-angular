@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeaveComponent } from './leave/leave.component';
-import { AvailableLeaveComponent } from './available-leave/available-leave.component';
+import { AvailableLeaveComponent } from './request-leave/request-leave.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
-import { LeaveRequestRoutingModule } from './leave-request-routing-module';
+import { OwnLeaveRoutingModule } from './own-leave-routing-module';
 import { SharedModule } from '../shared/shared.module';
+import { SubmittedLeaveComponent } from './submitted-leave/submitted-leave.component';
 
 
 
@@ -13,12 +14,13 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     LeaveComponent,
     AvailableLeaveComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    SubmittedLeaveComponent
   ],
   imports: [
     CommonModule,
-    LeaveRequestRoutingModule,
+    OwnLeaveRoutingModule,
     SharedModule
   ]
 })
-export class LeaveRequestModule { }
+export class OwnLeaveModule { }

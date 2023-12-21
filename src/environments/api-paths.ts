@@ -1,4 +1,5 @@
 export enum ApiPaths{
      workers = "workers",
-     leaves = "leaves"
+     leaves = "leaves",
+     singleLeaves = "singleleaves"
 }

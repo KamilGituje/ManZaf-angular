@@ -11,6 +11,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 
@@ -29,7 +31,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatNativeDateModule,
     FormsModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    MatButtonToggleModule
   ],
   providers: [
   ],
@@ -44,7 +48,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatNativeDateModule,
     FormsModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    MatButtonToggleModule
   ]
 })
 export class SharedModule { }

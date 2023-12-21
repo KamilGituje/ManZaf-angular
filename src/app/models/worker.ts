@@ -6,4 +6,5 @@ email: string;
 birthDate: string;
 hiringDate: string;
 managerId: number;
+workers: Worker[];
 }
