@@ -1,0 +1,30 @@
+mat-drawer-container{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+mat-drawer{
+    width: 300px;
+}
+mat-list-item{
+    cursor:pointer;
+}
+a.navbar-brand{
+    margin:auto;
+    position: relative;
+    align-self: center;
+    display: flex;
+    text-align: center;
+}
+div{
+    padding: 20px;
+}
+mat-drawer-content{
+    padding: 50px;
+}
+::ng-deep .snackbar-success  {
+    --mdc-snackbar-container-color: #0a8d40;
+}
+::ng-deep .snackbar-fail {
+    --mdc-snackbar-container-color: #c43535;
+}

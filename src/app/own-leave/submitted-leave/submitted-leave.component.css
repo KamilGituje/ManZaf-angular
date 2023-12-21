@@ -1,0 +1,12 @@
+::ng-deep tbody{
+    background-color: green !important;
+}
+::ng-deep tr{
+    background-color: green !important;
+}
+td.st-accepted{
+    color: green;
+}
+td.st-rejected{
+    color: red;
+}
