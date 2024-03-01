@@ -25,7 +25,7 @@ export class AvailableLeaveComponent implements OnInit {
   constructor(private workerService: WorkerService, private leaveService: LeaveService, private singleLeaveService: SingleLeaveService, private dialog: MatDialog, private datePipe: DatePipe, private snackBar: MatSnackBar) { }
 
   leaves: Leave[];
-  singleLeave: SingleLeaveForCreation = new SingleLeaveForCreation();
+  singleLeave = new SingleLeaveForCreation();
   singleLeaveResponse: SingleLeave;
   selectedLeave: Leave;
 

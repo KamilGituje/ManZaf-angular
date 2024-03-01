@@ -1,30 +1,42 @@
 mat-drawer-container{
-    height: 100%;
+    height: 90%;
     width: 90%;
-    margin: auto;
+    margin: 50px;
+    background-color: rgba(37, 36, 36, 0.9);
+    border-radius: 20px;
+    border-color:rgba(71, 71, 71, 0.6);
+    border-style: solid;
 }
 mat-drawer{
-    width: 300px;
+    width: 250px;
+    background-color: rgba(100, 100, 100, 0.6);
+    position: relative;
 }
 mat-list-item{
-    cursor:pointer;
-}
-a.navbar-brand{
-    margin:auto;
-    position: relative;
-    align-self: center;
-    display: flex;
-    text-align: center;
-}
-div{
-    padding: 20px;
+    cursor:pointer !important;
 }
 mat-drawer-content{
-    padding: 50px;
+    height: 90%;
+    opacity: 100%;
+    margin: 50px;
 }
 ::ng-deep .snackbar-success  {
     --mdc-snackbar-container-color: #0a8d40;
 }
 ::ng-deep .snackbar-fail {
     --mdc-snackbar-container-color: #c43535;
+}
+div{
+    display: flex;
+    height: calc(100% - 40px);
+}
+nav{
+    height: 40px;
+    color: white;
+}
+nav.bg-body-tertiary{
+    background-color: rgb(0, 0, 0) !important;
+}
+a.navbar-brand{
+    color: white;
 }

@@ -1,4 +1,4 @@
-<table class="table table-sm table-striped table-hover narrow">
+<table class="table table-dark table-sm table-striped table-hover narrow">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr  class="pointer" *ngFor="let leave of leaves; let i = index" (click)="openDialog(leave)">
+    <tr class="pointer" *ngFor="let leave of leaves; let i = index" (click)="openDialog(leave)">
       <th scope="row">{{i + 1}}</th>
       <td>{{leave.leaveType.name}}</td>
       <td>{{leave.quantity}}</td>
@@ -15,7 +15,6 @@
   </tbody>
 </table>
 <div *ngIf="singleLeave.startDate">
-<div><a>{{selectedLeave.leaveType.name}} leave from {{singleLeave.startDate}} to {{singleLeave.endDate}}</a>
-</div>
-<div><button mat-raised-button color="primary" (click)="onConfirm(singleLeave)">Confirm</button></div>
+  <div>{{selectedLeave.leaveType.name}} leave from {{singleLeave.startDate}} to {{singleLeave.endDate}}</div>
+  <div><button mat-raised-button color="primary" (click)="onConfirm(singleLeave)">Confirm</button></div>
 </div>

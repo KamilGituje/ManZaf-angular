@@ -12,7 +12,7 @@
             <th scope="row">{{i + 1}}</th>
             <td>{{singleLeave.leaveType.name}}</td>
             <td>{{singleLeave.startDate}} - {{singleLeave.endDate}}</td>
-            <td [ngClass]="{'st-accepted': singleLeave.status === 1, 'st-rejected': singleLeave.status === 2}">{{status[singleLeave.status]}}</td>
+            <td [ngClass]="{'st-accepted': singleLeave.status === status.accepted, 'st-rejected': singleLeave.status === status.rejected}">{{status[singleLeave.status]}}</td>
         </tr>
     </tbody>
 </table>

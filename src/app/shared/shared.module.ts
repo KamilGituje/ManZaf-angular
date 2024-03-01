@@ -13,6 +13,7 @@ import { MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -33,7 +34,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatDialogModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatMenuModule
   ],
   providers: [
   ],
@@ -50,7 +52,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatDialogModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatMenuModule
   ]
 })
 export class SharedModule { }

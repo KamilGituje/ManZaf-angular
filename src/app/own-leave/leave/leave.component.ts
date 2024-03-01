@@ -5,11 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './leave.component.html',
   styleUrls: ['./leave.component.css']
 })
-export class LeaveComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LeaveComponent {
 }
